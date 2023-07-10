@@ -15,6 +15,7 @@ public class ProdutoMapper implements AbstractMapper<Produto, ProdutoDTO> {
     @Override
     public ProdutoDTO entidadeParaDTO(Produto entidade) {
         return Objects.isNull(entidade) ? null : ProdutoDTO.builder()
+                .id(entidade.getId())
                 .nome(entidade.getNome())
                 .valor(entidade.getValor())
                 .descricao(entidade.getDescricao())
