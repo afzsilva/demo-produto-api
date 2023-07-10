@@ -1,12 +1,14 @@
 package br.com.demoprodutoapi.entities;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
 
 
 @Entity
+@Builder
 @Data
 public class Produto {
 

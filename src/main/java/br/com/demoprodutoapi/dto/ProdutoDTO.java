@@ -3,10 +3,16 @@ package br.com.demoprodutoapi.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.Size;
+import lombok.Builder;
+import lombok.Data;
 
 import java.math.BigDecimal;
 
+@Data
+@Builder
 public class ProdutoDTO {
+
+    private Long id;
 
     @Size(max = 255)
     private String nome;
