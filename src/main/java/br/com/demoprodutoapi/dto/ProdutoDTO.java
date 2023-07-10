@@ -1,13 +1,16 @@
 package br.com.demoprodutoapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
 
+@AllArgsConstructor
 @Data
 @Builder
 public class ProdutoDTO {

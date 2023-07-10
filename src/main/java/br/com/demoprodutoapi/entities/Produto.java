@@ -1,19 +1,24 @@
 package br.com.demoprodutoapi.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 
-@Entity
-@Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+@Table(name = "PRODUTO")
 public class Produto {
 
+    //@Column(nullable = false, updatable = false)
     @Id
-    @Column(nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
